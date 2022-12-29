@@ -22,10 +22,10 @@ export default function Sidebar({ id }) {
       <Tab.Container activeKey={activeKey} onSelect={setActiveKey}>
         <Nav variant="tabs" className="justify-content-center">
           <Nav.Item>
-            <Nav.Link eventKey={CONVERSATIONS_KEY}>Conversations</Nav.Link>
+            <Nav.Link eventKey={CONVERSATIONS_KEY}><b>Conversations</b></Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link eventKey={CONTACTS_KEY}>Contacts</Nav.Link>
+            <Nav.Link eventKey={CONTACTS_KEY}><b>Contacts</b></Nav.Link>
           </Nav.Item>
         </Nav>
         <Tab.Content className="border-right overflow-auto flex-grow-1">
@@ -36,11 +36,11 @@ export default function Sidebar({ id }) {
             <Contacts />
           </Tab.Pane>
         </Tab.Content>
-        <div className="p-2 border-top border-right small">
-          Your Id: <span className="text-muted">{id}</span>
+        <div className="p-2 border-top border-right small" id="riya">
+          <b>Your Id: <span className="text-success">{id}</span></b>
         </div>
         <Button onClick={() => setModalOpen(true)} className="rounded-0">
-          New {conversationsOpen ? 'Conversation' : 'Contact'}
+          <b>New {conversationsOpen ? 'Conversation' : 'Contact'}</b>
         </Button>
       </Tab.Container>
 

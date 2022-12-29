@@ -19,11 +19,11 @@ export default function Login({ onIdSubmit }) {
     <Container className="align-items-center d-flex" style={{ height: '100vh' }}>
       <Form onSubmit={handleSubmit} className="w-100">
         <Form.Group>
-          <Form.Label>Enter Your Id</Form.Label>
+          <Form.Label><b>Enter Your Id</b></Form.Label>
           <Form.Control type="text" ref={idRef} required />
         </Form.Group>   
-        <Button type="submit" className="mr-2">Login</Button>
-        <Button onClick={createNewId} variant="secondary">Create A New Id</Button>
+        <Button type="submit" className="mr-2"><b>Login</b></Button>
+        <Button onClick={createNewId} variant="secondary"><b>Create A New Id</b></Button>
       </Form>
     </Container>
   )
